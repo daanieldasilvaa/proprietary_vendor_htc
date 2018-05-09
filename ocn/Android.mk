@@ -1,4 +1,4 @@
-# Copyright (C) 2017-2018 SlimRoms
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -116,6 +116,18 @@ LOCAL_MODULE := CNEService
 LOCAL_MODULE_OWNER := htc
 LOCAL_SRC_FILES := proprietary/priv-app/CNEService/CNEService.apk
 LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := GoogleHotwordEnrollment
+LOCAL_MODULE_OWNER := htc
+LOCAL_SRC_FILES := proprietary/priv-app/GoogleHotwordEnrollment/GoogleHotwordEnrollment.apk
+LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_DEX_PREOPT := false
